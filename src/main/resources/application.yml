@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: zy-service-user
+          uri: lb:ws//zy-service-user
+          predicates:
+            - Path=/api_user/**
+          filters:
+            - RewritePath=/api_user/(?<segment>.*), /$\{segment}

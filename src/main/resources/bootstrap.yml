@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    zookeeper:
+      connectString: localhost:2181
+      discovery:
+        instanceHost: ${server.host}
+        instancePort: ${server.port}
+        register: true

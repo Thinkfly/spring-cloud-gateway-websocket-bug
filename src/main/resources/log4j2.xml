@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" shutdownHook="disable">
+
+    <properties>
+        <property name="server_name">
+            gateway
+        </property>
+    </properties>
+
+    <Appenders>
+
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss}|[%level]|[%c]|[%t] %X{transId} {%m}%n"/>
+        </Console>
+
+    </Appenders>
+
+    <Loggers>
+        <root level="info">
+            <AppenderRef ref="CONSOLE"/>
+        </root>
+    </Loggers>
+
+</Configuration>
